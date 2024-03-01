@@ -47,7 +47,9 @@ export const showCompanys = async (req, res) => {
     try {
         let results = await Company.find()
         if (!results) return res.status(400).send({ message: 'Empty colleection' })
-        return res.send({ results })
+        return res.send(
+            { results }
+        )
     } catch (err) {
         console.error(err)
         return res.status(500).send({ message: 'Nothing to show' })
@@ -58,14 +60,17 @@ export const createExel = async (req, res) => {
     try {
 
         // Manda a llamar a los datos guardados de compañia
-        const companies = await Company.find();
+        const companies = await Company.find().populate({
+            path: 'businessCategory',
+            select: '-_id'
+        });
 
             // Si no se encuentran compañias las cuales agregar al excel, se enviara un mensaje
         if (companies.length === 0) {
             return res.status(404).send({ message: 'No companies found to export' });
         }
         // Crea un nuevo libro de Excel
-        const workbook = new ExcelJS.Workbook();
+        const workbook = new ExcelJS.Workbook();    
         // Crea una nueva hoja de excel llamada Companies
         const worksheet = workbook.addWorksheet('Companies');
 
@@ -94,7 +99,7 @@ export const createExel = async (req, res) => {
         });
 
         // Genera el nombre para el Excel(se usa el Date.now() para que este le agregue la fecha exacta al nombre del archivo ya que esta es unica al llevar incluidos los segundos)
-        const filename = `Compañias_${Date.now()}.xlsx`
+        const filename = `Interfel_${Date.now()}.xlsx`
 
         // Guarda el archivo Excel
         await workbook.xlsx.writeFile(filename);
@@ -114,7 +119,7 @@ export const getExperiences = async(req, res) => {
         //Buscar
         let company = await Company.find(
             {yearsOfExperience: search}
-        )
+        ).populate('businessCategory', ['name'])
         //Validar la respuesta
         if(!company) return res.status(404).send({message: 'Category not found'})
         //Responder
@@ -131,11 +136,11 @@ export const getCompany = async(req, res) => {
         let { search } = req.body
         if(search == 'ascendente') {
             //Obtener todas las empresas en orden A-Z
-            let company = await Company.find().sort({ name: 1 })
+            let company = await Company.find().sort({ name: 1 }).populate('businessCategory', ['name'])
 
             return res.send({ company })
         }else if (search == 'descendente') {
-            let company = await Company.find().sort({ name: -1 })
+            let company = await Company.find().sort({ name: -1 }).populate('businessCategory', ['name'])
 
             return res.send({ company })
         }else{
@@ -155,7 +160,7 @@ export const getCategory = async(req, res) => {
         //Buscar
         let company = await Company.find(
             {businessCategory: search}
-        )
+        ).populate('businessCategory', ['name'])
         //Validar la respuesta
         if(!company) return res.status(404).send({message: 'Category not found'})
         //Responder

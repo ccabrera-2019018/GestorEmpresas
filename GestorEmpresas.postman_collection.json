@@ -168,7 +168,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI2MDYzNCwiZXhwIjoxNzA5MjcxNDM0fQ.OHq3BVAwjQOf4SZhVArFkjoLPrvYpWXkst_FHhUMX_k",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTMxMzQyNCwiZXhwIjoxNzA5MzI0MjI0fQ.zzaHPZArpnOFAowjXaE1lpIFe2FbrJ-okjWkU0uJ5xM",
 								"type": "text"
 							}
 						],
@@ -177,32 +177,32 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "Elektra",
+									"value": "Ferrari",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Venta de electrodomesticos",
+									"value": "Creacion y venta de vehiculos",
 									"type": "text"
 								},
 								{
 									"key": "contact",
-									"value": "56231456",
+									"value": "26180000",
 									"type": "text"
 								},
 								{
 									"key": "impactLevel",
-									"value": "60",
+									"value": "90",
 									"type": "text"
 								},
 								{
 									"key": "yearsOfExperience",
-									"value": "20",
+									"value": "63",
 									"type": "text"
 								},
 								{
 									"key": "businessCategory",
-									"value": "Electrodomesticos",
+									"value": "65e1e0709376775374e0298c",
 									"type": "text"
 								}
 							]
@@ -236,7 +236,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTIxODE3OSwiZXhwIjoxNzA5MjI4OTc5fQ.WYJkpLODuf7lZje1X4HnsSj7mSnATKhObzwGEA8eNS0",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTMwNjE0NiwiZXhwIjoxNzA5MzE2OTQ2fQ.iUx1CY-1DyFlPGAnCnlK1Lm-CQXUFdLyfrJAirGqu5g",
 								"type": "text"
 							}
 						],
