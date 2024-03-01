@@ -1,0 +1,458 @@
+{
+	"info": {
+		"_postman_id": "0a26ecea-7490-4a54-83f0-cb60e7c98cd7",
+		"name": "GestorEmpresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33016597"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2656/user/test",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"user",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ccabrera@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Carlos",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Carlitos",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "carlitos",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ccabrera@kinal.edu.gt",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:2656/user/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"user",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2656/user/deleteU/",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"user",
+								"deleteU",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "AddCompany",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI2MDYzNCwiZXhwIjoxNzA5MjcxNDM0fQ.OHq3BVAwjQOf4SZhVArFkjoLPrvYpWXkst_FHhUMX_k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Elektra",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Venta de electrodomesticos",
+									"type": "text"
+								},
+								{
+									"key": "contact",
+									"value": "56231456",
+									"type": "text"
+								},
+								{
+									"key": "impactLevel",
+									"value": "60",
+									"type": "text"
+								},
+								{
+									"key": "yearsOfExperience",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "businessCategory",
+									"value": "Electrodomesticos",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/company/save",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"company",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCompany",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "CreateExcel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTIxODE3OSwiZXhwIjoxNzA5MjI4OTc5fQ.WYJkpLODuf7lZje1X4HnsSj7mSnATKhObzwGEA8eNS0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2656/company/createExcel",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"company",
+								"createExcel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCompanys",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI5ODg1MCwiZXhwIjoxNzA5MzA5NjUwfQ.PlKpml_aYHDQEY6zKoLRsPqOQYYAE-37vmOOlRNsQhE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2656/company/showCompanys",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"company",
+								"showCompanys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter A-Z",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI5ODg1MCwiZXhwIjoxNzA5MzA5NjUwfQ.PlKpml_aYHDQEY6zKoLRsPqOQYYAE-37vmOOlRNsQhE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "search",
+									"value": "ascendente",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/company/getCompany",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"company",
+								"getCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilterCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI5ODg1MCwiZXhwIjoxNzA5MzA5NjUwfQ.PlKpml_aYHDQEY6zKoLRsPqOQYYAE-37vmOOlRNsQhE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "search",
+									"value": "Vehiculos",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/company/getCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"company",
+								"getCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilterExperiences",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI5ODg1MCwiZXhwIjoxNzA5MzA5NjUwfQ.PlKpml_aYHDQEY6zKoLRsPqOQYYAE-37vmOOlRNsQhE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "search",
+									"value": "70",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/company/getExperiences",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"company",
+								"getExperiences"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "AddCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI5ODg1MCwiZXhwIjoxNzA5MzA5NjUwfQ.PlKpml_aYHDQEY6zKoLRsPqOQYYAE-37vmOOlRNsQhE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Bebidas Alcoholicas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2656/category/save",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"category",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUwMDc2Nzc5YTViY2U2M2FhYzgyMjEiLCJ1c2VybmFtZSI6ImNhcmxpdG9zIiwibmFtZSI6IkNhcmxvcyIsImlhdCI6MTcwOTI5ODg1MCwiZXhwIjoxNzA5MzA5NjUwfQ.PlKpml_aYHDQEY6zKoLRsPqOQYYAE-37vmOOlRNsQhE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2656/category/showsCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "2656",
+							"path": [
+								"category",
+								"showsCategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
